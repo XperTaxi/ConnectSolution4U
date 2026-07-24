@@ -1,0 +1,60 @@
+    <!-- Contact Form Section -->
+    <section id="contact" class="max-w-3xl mx-auto px-6 pb-24 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl font-bold mb-2 text-center text-white">Request a Consultation</h2>
+            <p class="text-slate-400 text-center mb-8 text-sm">Fill out the form below and an engineering specialist will reach out within 24 hours.</p>
+            
+            <!-- Replace the action URL with your actual Formspree/Formspark link later -->
+            <form action="https://formspree.io" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Full Name</label>
+                        <input type="text" name="name" required placeholder="John Doe" 
+                               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Business Email</label>
+                        <input type="email" name="email" required placeholder="john@company.com" 
+                               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="(555) 000-0000" 
+                               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Service Required</label>
+                        <select name="service" required 
+                                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300 appearance-none">
+                            <option value="" disabled selected class="text-slate-600">Select a service...</option>
+                            <option value="networking">Network Solutions & Cabling</option>
+                            <option value="cctv">CCTV Surveillance Systems</option>
+                            <option value="access-control">Access Control & Alarms</option>
+                            <option value="full-package">Complete Tech Integration</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Project Details</label>
+                    <textarea name="message" rows="4" required placeholder="Tell us about your property or project requirements..." 
+                              class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+
+                <button type="submit" 
+                        class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] cursor-pointer">
+                    Submit Request <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 text-center py-8 text-slate-600 text-sm">
+        <p>&copy; 2026 Your Business Name. All rights reserved.</p>
+    </footer>

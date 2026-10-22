@@ -13,8 +13,8 @@ images/        Service illustrations and gallery placeholders
 
 ## Customize
 
-1. Business name, email, phone and service area are already set. Update them in `index.html` if anything changes.
-2. Quote requests are delivered by Web3Forms (see Quote form below).
+1. Business name, email, phone and service area are already set. Update them in `index.html` and `script.js` if anything changes.
+2. The quote form sends to the address in `BUSINESS_EMAIL` in `script.js`.
 3. Replace the placeholder images:
    - Put your own photos in `images/` (JPG or WebP, ideally under 300 KB each).
    - Update the `src` and `alt` text in `index.html`. Example: `images/work-1.svg` becomes `images/rack-install.jpg`.
@@ -39,7 +39,7 @@ Then on GitHub: **Settings → Pages → Build and deployment → Deploy from a 
 
 ## Quote form
 
-The form sends requests to 4Uconnectsolutions@gmail.com through [Web3Forms](https://web3forms.com). The access key in `index.html` is public by design and can only deliver messages to that inbox. To change where requests go, update the email on your Web3Forms dashboard (or create a new form there and replace the `access_key` value).
+The form opens the visitor's email app with their details filled in, which works on any static host. For submissions that arrive in your inbox without the visitor's email app, sign up for a form service such as Formspree or Web3Forms and point the form's `action` at it.
 
 ## License
 

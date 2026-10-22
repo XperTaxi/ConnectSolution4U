@@ -91,11 +91,3 @@ form button{justify-self:start}
 .contact-details strong{display:inline-block;min-width:7.5em}
 .site-footer a{color:#b9c8d3}
 .site-footer a:hover{color:var(--amber)}
-
-/* align intro text with the left edge of the content */
-section>.lead,.about>p{max-width:none;width:min(60ch,100%);margin-left:max(0px,calc((100% - var(--max))/2));margin-right:0}
-.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
-#form-note{margin:0;font-weight:600}
-#form-note.ok{color:#0a6b3d}
-#form-note.error{color:#b3261e}
-.btn:disabled{opacity:.6;cursor:wait}

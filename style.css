@@ -1,0 +1,119 @@
+:root{
+  --ink:#0e2233; --paper:#f3f6f8; --line:#c9d3da; --teal:#0f7c8a; --teal-dark:#0a5c67; --amber:#f2a900; --white:#fff;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.6 "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
+h3{font-size:1.4rem;font-weight:700}
+img{max-width:100%;display:block}
+a{color:var(--teal-dark)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:8px;top:8px;background:var(--white);padding:8px 12px;z-index:20}
+
+section{padding:72px 24px}
+section>*{max-width:var(--max);margin-inline:auto}
+.lead{max-width:60ch;color:#3b4f5f}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;background:var(--ink);color:var(--white)}
+.brand{font:800 1.2rem Archivo,sans-serif;color:var(--white);text-decoration:none}
+.site-header nav{display:flex;gap:24px;align-items:center}
+.site-header nav a{color:var(--white);text-decoration:none;font-weight:600}
+.site-header nav a:hover{color:var(--amber)}
+.nav-toggle{display:none;background:none;border:1px solid var(--white);color:var(--white);padding:6px 12px;border-radius:4px;font:inherit}
+
+/* buttons */
+.btn{display:inline-block;background:var(--amber);color:var(--ink);font:700 1rem Archivo,sans-serif;
+  padding:14px 26px;border:0;border-radius:4px;text-decoration:none;cursor:pointer}
+.btn:hover{background:#ffbd2e}
+.btn.ghost{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--white)}
+.btn.small{padding:8px 16px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;max-width:var(--max);margin:0 auto;padding-top:64px}
+.hero-text p{max-width:52ch;font-size:1.15rem}
+.hero-img{border-radius:8px;border:1px solid var(--line)}
+
+/* services */
+.services{background:var(--white)}
+.services h2{margin-bottom:40px}
+.service{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;padding:32px 0;border-top:1px solid var(--line)}
+.service.flip{grid-template-columns:1.2fr 1fr}
+.service.flip img{order:2}
+.service img{border-radius:8px;width:100%}
+.service ul{padding-left:1.1em;margin:12px 0 0}
+.service li::marker{color:var(--teal)}
+
+/* work */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px}
+.gallery figure{margin:0}
+.gallery img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.gallery figcaption{margin-top:8px;font-size:.95rem;color:#3b4f5f}
+code{background:#e3eaef;padding:2px 6px;border-radius:3px;font-size:.9em}
+
+/* about */
+.about{background:var(--ink);color:var(--white)}
+.about p{max-width:60ch}
+.facts{display:flex;gap:48px;flex-wrap:wrap;margin-top:32px}
+.facts dt{font:800 1.8rem Archivo,sans-serif;color:var(--amber)}
+.facts dd{margin:0}
+
+/* contact */
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+label.wide,form button,#form-note{grid-column:1/-1}
+input,select,textarea{font:inherit;padding:12px;border:1px solid #8aa0ae;border-radius:4px;background:var(--white)}
+form button{justify-self:start}
+
+.site-footer{background:var(--ink);color:#b9c8d3;text-align:center;padding:24px;border-top:1px solid #1d3a50}
+.site-footer p{margin:0;font-size:.95rem}
+
+@media (max-width:800px){
+  .hero,.service,.service.flip{grid-template-columns:1fr}
+  .service.flip img{order:0}
+  form{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .site-header nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;padding:16px 24px}
+  .site-header nav.open{display:flex}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.site-header nav a.phone-link{color:var(--amber)}
+.contact-details{list-style:none;padding:0;margin:24px auto 0;display:grid;gap:8px}
+.contact-details strong{display:inline-block;min-width:7.5em}
+.site-footer a{color:#b9c8d3}
+.site-footer a:hover{color:var(--amber)}
+
+/* align intro text with the left edge of the content */
+section>.lead,.about>p{max-width:none;width:min(60ch,100%);margin-left:max(0px,calc((100% - var(--max))/2));margin-right:0}
+.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+#form-note{margin:0;font-weight:600}
+#form-note.ok{color:#0a6b3d}
+#form-note.error{color:#b3261e}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* client wall */
+.clients{background:linear-gradient(180deg,#0e2233 0%,#12304a 100%);color:var(--white);text-align:center;padding-block:88px}
+.clients h2{color:var(--white)}
+.clients .lead{color:#b9c8d3;margin-inline:auto!important;margin-bottom:48px}
+section.clients>.lead{margin-left:auto;margin-right:auto}
+.client-wall{list-style:none;margin:0 auto;padding:0;display:flex;flex-wrap:wrap;justify-content:center;max-width:var(--max)}
+.client-wall li{font:800 clamp(1.5rem,3.6vw,2.6rem) Archivo,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  padding:22px 40px;color:#dbe6ee;position:relative;opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease,color .25s}
+.client-wall li+li::before{content:"";position:absolute;left:0;top:30%;height:40%;width:2px;background:var(--amber);opacity:.7}
+.client-wall.in li{opacity:1;transform:none}
+.client-wall.in li:nth-child(2){transition-delay:.12s}
+.client-wall.in li:nth-child(3){transition-delay:.24s}
+.client-wall.in li:nth-child(4){transition-delay:.36s}
+.client-wall.in li:nth-child(n+5){transition-delay:.48s}
+.client-wall li:hover{color:var(--amber)}
+@media (max-width:600px){.client-wall li+li::before{display:none}.client-wall li{padding:14px 20px}}
+@media (prefers-reduced-motion:reduce){.client-wall li{opacity:1;transform:none;transition:none}}

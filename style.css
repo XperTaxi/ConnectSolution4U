@@ -123,3 +123,9 @@ section.clients>.lead{margin-left:auto;margin-right:auto}
 .areas{list-style:none;padding:0;margin-top:0;margin-bottom:0;display:flex;flex-wrap:wrap;gap:10px}
 .areas li{border:1px solid #2c5877;border-radius:999px;padding:6px 16px;font-size:1rem;color:#dbe6ee}
 .areas li:last-child{border-style:dashed;color:#b9c8d3}
+
+/* who-gets-what access list in Networking */
+.service .access{list-style:none;padding:0;margin:18px 0 8px;display:grid;gap:8px}
+.service .access li{display:flex;gap:14px;padding:10px 14px;background:var(--paper);border-left:4px solid var(--teal);border-radius:4px}
+.service .access strong{flex:0 0 4.8em;font-family:Archivo,system-ui,sans-serif}
+@media (max-width:480px){.service .access li{flex-direction:column;gap:2px}}

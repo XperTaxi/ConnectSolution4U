@@ -117,3 +117,9 @@ section.clients>.lead{margin-left:auto;margin-right:auto}
 .client-wall li:hover{color:var(--amber)}
 @media (max-width:600px){.client-wall li+li::before{display:none}.client-wall li{padding:14px 20px}}
 @media (prefers-reduced-motion:reduce){.client-wall li{opacity:1;transform:none;transition:none}}
+
+/* service areas */
+.areas-title{color:var(--white);margin-top:36px;margin-bottom:14px;font-size:1.2rem}
+.areas{list-style:none;padding:0;margin-top:0;margin-bottom:0;display:flex;flex-wrap:wrap;gap:10px}
+.areas li{border:1px solid #2c5877;border-radius:999px;padding:6px 16px;font-size:1rem;color:#dbe6ee}
+.areas li:last-child{border-style:dashed;color:#b9c8d3}
